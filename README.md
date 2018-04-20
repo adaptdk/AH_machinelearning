@@ -4,6 +4,15 @@ The goal of the project is to build an API that can tag articles based on machin
 
 There is a large body of tagged articles prepared from the sygeplejesken magazine. The raw exported articles are located in the `exported` folder. In `processed` the file `tagged-articles.json` contains all articles with at least one tag and stripped for all the Drupal related data. The `train.txt` file contains the article body and the tags in a format prepared for fastText.
 
+There's a lot that can be done to improve the model. Read the guide https://fasttext.cc/docs/en/supervised-tutorial.html for examples on how to optimize.
+
+Example optimizations:
+
+- Optimize the options to the learning command
+- The title and summary is not part of the dataset
+- there's a lot of links in the dataset
+- there's no stopword filtering
+
 ## Convert cli
 
 ### Converts JSON files with articles
